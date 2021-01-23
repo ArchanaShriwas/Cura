@@ -21,10 +21,11 @@
         "file_formats": "application/gzip;text/x-gcode",
 
         # This is 3D model for your machine platform. Put your model file in "resources/meshes/" folder 
-        "platform": "ultimaker3_platform.obj",
+        #"platform": "ultimaker3_platform.obj",
+        "platform": "build plate.STL",
 
         # The texture image file of your machine platform. It's usually the logo of your machine.
-        "platform_texture": "Ultimaker3backplate.png",
+        #"platform_texture": "Ultimaker3backplate.png",
 
         # The offset of your platform model for rendering
         "platform_offset": [0, 0, 0],
@@ -75,10 +76,10 @@
 
         # The extruder definitions this machine has.
         # The names are the file names of your extruder definition files without (.def.json) file extensions.
-        "machine_extruder_trains":
+        "machine_extruder_trains": 
         {
-            "0": "ultimaker3_extruder_left",
-            "1": "ultimaker3_extruder_right"
+            "0": "FAB_Extruder0",
+            #"1": "ultimaker3_extruder_right"
         },
     },
 
