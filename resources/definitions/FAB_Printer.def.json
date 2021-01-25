@@ -1,86 +1,26 @@
 {
     "version": 2,
-
-    # human-readable machine name
     "name": "FAB Printer",
-
-    # this machine definition file is based on "ultimaker.def.json". In your case,
-    # you probably need "fdmprinter" instead.
-    #"inherits": "ultimaker",
     "inherits": "fdmprinter",
- 
     "metadata": {
-        "author": "Arch",
+        "author": "FAB Printers Arc",
         "manufacturer": "FAB Printers",
-
-        # Whether this machine is visible in the machine selection list
         "visible": true,
-
-        # The gcode file formats this machine supports in the order of preferences. In your case,
-        # you probably just need "text/x-gcode"
         "file_formats": "application/gzip;text/x-gcode",
-
-        # This is 3D model for your machine platform. Put your model file in "resources/meshes/" folder 
-        #"platform": "ultimaker3_platform.obj",
         "platform": "build plate.STL",
-
-        # The texture image file of your machine platform. It's usually the logo of your machine.
-        #"platform_texture": "Ultimaker3backplate.png",
-
-        # The offset of your platform model for rendering
         "platform_offset": [0, 0, 0],
-
-        # Whether your machine has the possibility to choose different material profiles.
-        # If this is set to "true", you will see the materials selection menu in Cura for your machine.
         "has_materials": true,
-
-        # Whether your machine has the possibility to choose different variants.
-        # If this is set to "true", you will see the variant selection menu in Cura for your machine.
-        # By variants, we meant nozzles. You can have some specific variant profiles defined in folder
-        # "resources/variants". See files there as examples.
         "has_variants": true,
-
-        # The human-readable label for variants.
         "variants_name": "Print core",
-
-        # The preferred variant name for your machine.
-        # This is used as the default variant for your machine.
-        #"preferred_variant_name": "AA 0.4",
-        "preferred_variant_name": "NN 0.4",
-
-        # If there are machine-specific settings in material profiles for your machine.
-        # Open one material file and you can see that there are overall settings and there are specific settings
-        # for certain types of machines such as Ultimaker 3 and even more specific settings for a machine with
-        # a variant/nozzle such as "Ultimaker 3 AA 0.4". This field indicates whether you have machine-specific
-        # settings in materials in that regard.
+        "preferred_variant_name": "NN 0.4"
         "has_machine_materials": true,
-
-        # Similar to "has_machine_materials", but this says if there is variant-specific settings in materials,
-        # such as for "Ultimaker 3 AA 0.4".
         "has_variant_materials": true,
-
-        # The preferred quality type for your machine.
-        # This is used as the default quality type for your machine.
-        # For quality types that are available, please check the "quality_type" field in files in
-        # "resources/quality" folder
-        "preferred_quality_type": "normal",
-
-        # This field indicates whether your machine has specific quality profiles which you have created.
-        # Normally, we will just use the default profiles for your machine in "resources/quality" folder
-        # and NOT in its sub-folders. But you can also create your set of quality profiles for your machine.
-        # Those profiles can be places in "resources/quality/<my-machine>" folder. Please check the other
-        # folders for examples.
-        # In this case, you need to set this field to "true" so Cura knows to look for your specific qualities
-        # instead of using the default ones.
+        "preferred_quality_type": "high",
         "has_machine_quality": true,
-
-        # The extruder definitions this machine has.
-        # The names are the file names of your extruder definition files without (.def.json) file extensions.
         "machine_extruder_trains": 
         {
             "0": "FAB_Extruder0"
-            #"1": "ultimaker3_extruder_right"
-        },
+        }
     },
 
     "overrides": {
@@ -110,9 +50,6 @@
         },
         "material_diameter": {
             "default_value": 1.75
-        },
-        
-}
-         
-    }
+        },   
+    }     
 }
